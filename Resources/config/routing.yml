@@ -1,3 +1,7 @@
-BundleName_index:
+chaplean_cookie_index:
     path: /
-    defaults: { _controller: ChapleanBundleNameBundle:Default:index }
+    defaults: { _controller: ChapleanCookieBundle:Default:index }
+
+chaplean_cookie_headband:
+    path: /cookie-headband.js
+    defaults: { _controller: ChapleanCookieBundle:Cookie:cookieHeadband }

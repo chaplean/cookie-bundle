@@ -33,7 +33,7 @@ twig:
 assetic:
     debug:          "%use_assetic_debug%"
     use_controller: "%use_assetic_controller%"
-    bundles:        ['ChapleanBundleNameBundle']
+    bundles:        ['ChapleanCookieBundle']
     ruby: %ruby.bin%
     filters:
         cssrewrite: ~
@@ -72,3 +72,6 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+
+chaplean_cookie:
+    learn_more: http://localhost:8080/app_test.php/cookie

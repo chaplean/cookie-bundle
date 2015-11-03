@@ -12,6 +12,9 @@ use Symfony\Component\Config\Loader\LoaderInterface;
  */
 class AppKernel extends Kernel
 {
+    /**
+     * @return array
+     */
     public function registerBundles()
     {
         return array(
@@ -24,10 +27,15 @@ class AppKernel extends Kernel
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Chaplean\Bundle\UnitBundle\ChapleanUnitBundle(),
             new Liip\FunctionalTestBundle\LiipFunctionalTestBundle(),
-            new Chaplean\Bundle\BundleNameBundle\ChapleanBundleNameBundle(),
+            new Chaplean\Bundle\CookieBundle\ChapleanCookieBundle(),
         );
     }
 
+    /**
+     * @param LoaderInterface $loader
+     *
+     * @return void
+     */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(__DIR__ . '/config/config_' . $this->getEnvironment() .'.yml');

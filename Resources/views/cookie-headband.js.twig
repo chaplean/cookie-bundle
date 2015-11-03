@@ -1,0 +1,27 @@
+
+{% stylesheets
+    '@ChapleanCookieBundle/Resources/public/libs/cookieconsent2/build/dark-top.css'
+%}
+var css = document.createElement('link');
+css.rel = 'stylesheet';
+css.type = 'text/css';
+css.href = '{{ asset_url }}';
+document.head.appendChild(css);
+{% endstylesheets %}
+
+{% javascripts
+    '@ChapleanCookieBundle/Resources/public/libs/cookieconsent2/build/cookieconsent.min.js'
+%}
+var script = document.createElement('script');
+script.src = '{{ asset_url }}';
+document.head.appendChild(script);
+{% endjavascripts %}
+
+window.cookieconsent_options = {
+    message:   '{{ 'chaplean_cookie.message'|trans }}',
+    learnMore: '{{ 'chaplean_cookie.more'|trans }}',
+    dismiss:   '{{ 'chaplean_cookie.dismiss'|trans }}',
+    link:      '{{ learn_more }}',
+    expiryDay: '180',
+    theme:     'dark-top'
+};

@@ -1,2 +1,3 @@
 imports:
     - { resource: config.yml }
+    - { resource: @ChapleanCookieBundle/Resources/config/config.yml }

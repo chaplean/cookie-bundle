@@ -1,4 +1,8 @@
-chaplean_Cookie:
+chaplean_cookie_index:
+    path: /
+    defaults: { _controller: ChapleanCookieBundle:Default:index }
+
+chaplean_cookie_bundle:
     resource: "@ChapleanCookieBundle/Resources/config/routing.yml"
     prefix:   /
 

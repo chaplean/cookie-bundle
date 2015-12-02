@@ -1,1 +1,6 @@
-#services:
+services:
+    chaplean_cookie_bundle.cookie_extension:
+        class: Chaplean\Bundle\CookieBundle\Twig\Extension\CookieTwigExtension
+        arguments: [%chaplean_cookie%, @twig]
+        tags:
+            - { name: 'twig.extension' }

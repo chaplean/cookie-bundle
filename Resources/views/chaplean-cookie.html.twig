@@ -1,0 +1,11 @@
+{% javascripts
+'@ChapleanCookieBundle/Resources/public/libs/cookieconsent2/build/cookieconsent.min.js'
+%}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+{% set min = '' %}
+{% if app.environment in ['prod', 'preprod'] %}
+    {% set min = '.min' %}
+{% endif %}
+<script language="javascript" src="{{ path('chaplean-cookie' ~ min ~ '.js') }}"></script>

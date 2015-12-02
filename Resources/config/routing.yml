@@ -1,3 +1,7 @@
-chaplean_cookie_headband:
+chaplean-cookie.js:
     path: /cookie-headband.js
     defaults: { _controller: ChapleanCookieBundle:Cookie:cookieHeadband }
+
+chaplean-cookie.min.js:
+    path: /cookie-headband.js
+    defaults: { _controller: ChapleanCookieBundle:Cookie:cookieHeadband, uglify: true }

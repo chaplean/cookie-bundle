@@ -6,5 +6,6 @@ Feature: Index
 
   Scenario: Accept cookie
     Given: I am on homepage
+    When I wait 2000 millisec
     And I click on ".cc_btn"
     Then I should not see an ".cc_banner-wrapper" element

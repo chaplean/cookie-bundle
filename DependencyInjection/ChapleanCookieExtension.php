@@ -28,6 +28,9 @@ class ChapleanCookieExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
-        $container->setParameter('chaplean_cookie.learn_more', $config['learn_more']);
+        $container->setParameter('chaplean_cookie', $config);
+        foreach ($config as $key => $parameter) {
+            $container->setParameter('chaplean_cookie.' . $key, $parameter);
+        }
     }
 }

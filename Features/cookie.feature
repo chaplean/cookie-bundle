@@ -6,5 +6,5 @@ Feature: Index
 
   Scenario: Accept cookie
     Given: I am on homepage
-    And I click on ".cc_btn.cc_btn_accept_all"
+    And I click on ".cc_btn"
     Then I should not see an ".cc_banner-wrapper" element

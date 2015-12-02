@@ -1,0 +1,25 @@
+@import "../libs/cookieconsent2/styles/dark-bottom";
+
+.cc_banner-wrapper {
+    opacity: 0.92;
+
+    .cc_banner.cc_container{
+        height: 43px;
+        padding: 10px 30px;
+        font-size: 12px;
+
+        .cc_btn {
+            background: url('../bundles/chapleancookie/images/cross.png') no-repeat 50% 50%;
+            background-color: transparent;
+            color: transparent;
+            width: auto;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        p.cc_message {
+            color: #fff;
+            letter-spacing: 0.01em;
+        }
+    }
+}

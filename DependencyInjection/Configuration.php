@@ -23,6 +23,11 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('learn_more')->isRequired()->end()
+                ->arrayNode('translations')
+                ->children()
+                    ->scalarNode('message')->defaultValue('chaplean_cookie.message')->end()
+                    ->scalarNode('more')->defaultValue('chaplean_cookie.more')->end()
+                ->end()
             ->end();
 
         // Here you should define the parameters that are allowed to

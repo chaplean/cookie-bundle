@@ -17,6 +17,11 @@ class CookieTwigExtension extends \Twig_Extension
     private $parametersCookie;
 
     /**
+     * @var \Twig_Environment
+     */
+    private $templating;
+
+    /**
      * CookieTwigExtension constructor.
      *
      * @param array             $parametersCookie
@@ -42,7 +47,7 @@ class CookieTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'chaplean_cookie' => new \Twig_Function_Method($this, 'chapleanCookie', array('is_safe' => array('html'))),
+            new \Twig_SimpleFunction('chaplean_cookie', array($this, 'chapleanCookie'), array('is_safe' => array('html'))),
         );
     }
 

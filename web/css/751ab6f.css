@@ -170,7 +170,7 @@
   font-size: 12px; }
 
 .cc_banner-wrapper .cc_banner.cc_container .cc_btn {
-  background: url("../bundles/chapleancookie/images/cross.png") no-repeat 50% 50%;
+  background: url("/bundles/chapleancookie/images/cross.png") no-repeat 50% 50%;
   background-color: transparent;
   color: transparent;
   width: auto;

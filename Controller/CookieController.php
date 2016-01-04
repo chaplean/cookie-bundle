@@ -24,8 +24,12 @@ class CookieController extends Controller
      */
     public function cookieHeadbandAction($uglify = false)
     {
+        $translator = $this->get('translator');
+
         $script = $this->renderView('ChapleanCookieBundle::cookie-headband.js.twig', array(
-            'learn_more' => $this->getParameter('chaplean_cookie.learn_more'),
+            'learn_more'          => $this->getParameter('chaplean_cookie.learn_more'),
+            'translation_message' => $translator->trans($this->getParameter('chaplean_cookie.translations.message')),
+            'translation_more'    => $translator->trans($this->getParameter('chaplean_cookie.translations.more')),
         ));
 
         if ($uglify) {

@@ -75,3 +75,4 @@ doctrine:
 
 chaplean_cookie:
     learn_more: http://localhost:8080/app_test.php/cookie
+    translations: ~

@@ -27,6 +27,7 @@ app/config/config.yml:
 ```yaml
 chaplean_cookie:
     learn_more: <your_url>
+    translations: ~
 ```
 
 # 3. Update assetic

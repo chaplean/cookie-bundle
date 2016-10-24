@@ -1,7 +1,7 @@
 version: '2'
 services:
     application:
-        container_name: cookie-bundle_app
+        container_name: cookie_bundle_app
         build: .
         expose:
             - "9000"
@@ -10,7 +10,7 @@ services:
         links:
             - mysql:mysql
     mysql:
-        container_name: cookie-bundle_mysql
+        container_name: cookie_bundle_mysql
         image: chaplean/mysql
         volumes:
             - ./.db:/var/lib/mysql:rw

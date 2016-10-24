@@ -3,6 +3,6 @@ chaplean_cookie_index:
     defaults: { _controller: ChapleanCookieBundle:Default:index }
 
 chaplean_cookie_bundle:
-    resource: "@ChapleanCookieBundle/Resources/config/routing.yml"
+    resource: '@ChapleanCookieBundle/Resources/config/routing.yml'
     prefix:   /
 

@@ -1,25 +1,22 @@
 Getting Started With Chaplean Cookie Bundle
 ===========================================
 
-# 1. Add me in AppKernel
+# Installation
 
-app/AppKernel.php:
-```php
-...
-    /**
-     * @return array
-     */
-    public function registerBundles()
-    {
-        return array(
-            ...
-            new Chaplean\Bundle\CookieBundle\ChapleanCookieBundle(),
-        );
-    }
-...
+## 1. Composer
+
+```
+composer require chaplean/cookie-bundle
 ```
 
-# 2. Set learn_more
+## 2. AppKernel.php
+
+Add
+```
+            new Chaplean\Bundle\CookieBundle\ChapleanCookieBundle(),
+```
+
+## 3. Set learn_more
 
 Add a url for learn_more in headband.
 
@@ -30,7 +27,7 @@ chaplean_cookie:
     translations: ~
 ```
 
-# 3. Update assetic
+## 4. Update assetic
 
 Add this bundle in assetic config:
 ```yaml
@@ -38,18 +35,18 @@ assetic:
     bundles: ['ChapleanCookieBundle']
 ```
 
-# 4. Add routes
+## 5. Add routes
 
 Include a routing in global routing
 
 app/config/routing.yml:
 ```yaml
 chaplean_cookie_bundle:
-    resource: "@ChapleanCookieBundle/Resources/config/routing.yml"
+    resource: '@ChapleanCookieBundle/Resources/config/routing.yml'
     prefix:   /
 ```
 
-# 5. Add script in layout
+## 6. Add script in layout
 
 In layout html add me simply:
 

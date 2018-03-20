@@ -2,6 +2,7 @@
 
 // @codingStandardsIgnoreFile
 
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
@@ -63,9 +64,18 @@ class AppKernel extends Kernel
      * @param LoaderInterface $loader Resource loader.
      *
      * @return void
+     * @throws \Exception
      */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
+        $loader->load(
+            function (ContainerBuilder $container) {
+                $container->setParameter('container.autowiring.strict_mode', true);
+                $container->setParameter('container.dumper.inline_class_loader', true);
+                $container->addObjectResource($this);
+            }
+        );
+
         $loader->load($this->getRootDir() . '/config/config.yml');
     }
 }

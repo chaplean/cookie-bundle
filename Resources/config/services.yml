@@ -1,4 +1,8 @@
 services:
+    _defaults:
+        autowire: true
+        public: true
+
     chaplean_cookie_bundle.cookie_extension:
         class: Chaplean\Bundle\CookieBundle\Twig\Extension\CookieTwigExtension
         arguments: ['%chaplean_cookie%', '@twig']
